@@ -15,4 +15,10 @@ wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/VoNR
 patch -p1 <0001-Enable-VoNR-by-default.patch
 cd ../..
 
+echo 'Removing USB charging notification'
+cd frameworks/base
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Optimization/0004-Remove-USB-charging-notification.patch
+patch -p1 <0004-Remove-USB-charging-notification.patch
+cd ../..
+
 echo 'delete vendorsetup.sh from device tree once this is done'
