@@ -29,6 +29,17 @@ wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/VoNR
 patch -p1 <0001-Enable-VoNR-by-default.patch
 cd ../..
 
+# Dolby audio
+echo 'Adding Dolby patch'
+cd frameworks/av
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0002-OMX-Remove-support-for-prebuilt-ac4-decoder.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0004-Import-Dolby-Effects-initialization.patch
+patch -p1 <0002-OMX-Remove-support-for-prebuilt-ac4-decoder.patch
+patch -p1 <0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
+patch -p1 <0004-Import-Dolby-Effects-initialization.patch
+cd ../..
+
 echo 'Adding optimization patch'
 cd system/core
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Optimization/0001-Dont-enable-f2fs-iostat-by-default.patch
