@@ -29,6 +29,14 @@ echo 'Cloning Leica camera'
 git clone --depth=1 https://gitlab.com/Alucard_Storm/haydn-miuicamera -b fourteen-leica vendor/xiaomi/haydn-miuicamera
 rm -rf hardware/xiaomi/megvii
 
+echo 'Adding Gms patch'
+cd frameworks/base
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0002-Remove-read-device-config-checks.patch
+patch -p1 <0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
+patch -p1 <0002-Remove-read-device-config-checks.patch
+cd ../..
+
 # Audio
 echo 'Adding audio-app support'
 cd system/core
