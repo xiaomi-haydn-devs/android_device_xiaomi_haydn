@@ -64,6 +64,14 @@ patch -p1 <0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
 patch -p1 <0004-Import-Dolby-Effects-initialization.patch
 cd ../..
 
+echo 'Adding Gms patch'
+cd frameworks/base
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0002-Remove-read-device-config-checks.patch
+patch -p1 <0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
+patch -p1 <0002-Remove-read-device-config-checks.patch
+cd ../..
+
 echo 'Adding optimization patch'
 cd system/core
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Optimization/0001-Dont-enable-f2fs-iostat-by-default.patch
