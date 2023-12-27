@@ -335,6 +335,22 @@
     <!-- Build fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Xiaomi/haydn_global/haydn:13/TKQ1.220829.002/V14.0.5.0.TKKMIXM:user/release-keys</string>
 
+    <!-- Vibrator pattern for feedback about a long screen/key press -->
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>75</item>
+        <item>76</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>30</item>
+        <item>45</item>
+        <item>53</item>
+    </integer-array>
+
     <!-- The default refresh rate. haydn manages this using the peak refresh rate setting, so set
          this value to 0 so it has no effect. -->
     <integer name="config_defaultRefreshRate">0</integer>
