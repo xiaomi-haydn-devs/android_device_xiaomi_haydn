@@ -56,10 +56,8 @@ cd ../..
 # Dolby audio
 echo 'Adding Dolby patch'
 cd frameworks/av
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0002-OMX-Remove-support-for-prebuilt-ac4-decoder.patch
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0004-Import-Dolby-Effects-initialization.patch
-patch -p1 <0002-OMX-Remove-support-for-prebuilt-ac4-decoder.patch
 patch -p1 <0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
 patch -p1 <0004-Import-Dolby-Effects-initialization.patch
 cd ../..
@@ -67,9 +65,7 @@ cd ../..
 echo 'Adding Gms patch'
 cd frameworks/base
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0002-Remove-read-device-config-checks.patch
 patch -p1 <0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
-patch -p1 <0002-Remove-read-device-config-checks.patch
 cd ../..
 
 echo 'Adding optimization patch'
@@ -82,9 +78,7 @@ cd ../..
 
 cd frameworks/base
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Optimization/0003-BootReceiver-Return-early-if-trace-pipe-doesnt-exists.patch
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Optimization/0004-Remove-USB-charging-notification.patch
 patch -p1 <0003-BootReceiver-Return-early-if-trace-pipe-doesnt-exists.patch
-patch -p1 <0004-Remove-USB-charging-notification.patch
 cd ../..
 
 echo 'delete vendorsetup.sh from device tree once this is done'
