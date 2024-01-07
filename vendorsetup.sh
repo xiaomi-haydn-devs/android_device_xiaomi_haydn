@@ -32,9 +32,7 @@ rm -rf hardware/xiaomi/megvii
 echo 'Adding Gms patch'
 cd frameworks/base
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Gms/0002-Remove-read-device-config-checks.patch
 patch -p1 <0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
-patch -p1 <0002-Remove-read-device-config-checks.patch
 cd ../..
 
 # Audio
@@ -58,9 +56,7 @@ cd ../..
 
 cd frameworks/base
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Optimization/0003-BootReceiver-Return-early-if-trace-pipe-doesnt-exists.patch
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Optimization/0004-Remove-USB-charging-notification.patch
 patch -p1 <0003-BootReceiver-Return-early-if-trace-pipe-doesnt-exists.patch
-patch -p1 <0004-Remove-USB-charging-notification.patch
 cd ../..
 
 echo 'delete vendorsetup.sh from device tree once this is done'
