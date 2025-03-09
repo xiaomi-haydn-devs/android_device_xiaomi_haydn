@@ -30,4 +30,10 @@ rm -rf hardware/xiaomi/megvii
 echo 'Cloning Signing keys'
 git clone --depth=1 https://github.com/xiaomi-haydn-devs/priv_keys.git vendor/xiaomi/priv-keys
 
+# Leica Patch
+cd frameworks/native
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/refs/heads/14/Leicamera/0001-Add-back-redundant-connect-methods-in-Surface.patch
+patch -p1 <0001-Add-back-redundant-connect-methods-in-Surface.patch
+cd ../..
+
 echo 'delete vendorsetup.sh from device tree once this is done'
