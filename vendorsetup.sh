@@ -36,4 +36,7 @@ wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/refs/heads/
 patch -p1 <0001-Add-back-redundant-connect-methods-in-Surface.patch
 cd ../..
 
+# nuke fsgen
+rm -rf build/soong/fsgen/
+
 echo 'delete vendorsetup.sh from device tree once this is done'
