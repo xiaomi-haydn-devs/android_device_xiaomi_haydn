@@ -15,6 +15,11 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
             "${PATCHELF}" --remove-needed "libmegface.so" "${2}"
             grep -q "libshim_megvii.so" "${2}" || "${PATCHELF}" --add-needed "libshim_megvii.so" "${2}"
+            grep -q "libprocessgroup_shim.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
+            ;;
+        vendor/lib64/hw/com.qti.chi.override.so | \
+        vendor/lib64/libmialgoengine.so)
+            grep -q "libprocessgroup_shim.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
             ;;
         vendor/lib64/hw/camera.xiaomi.so)
             "${SIGSCAN}" -p "52 07 00 94" -P "1F 20 03 D5" -f "${2}"
