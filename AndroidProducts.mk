@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/horizon_haydn.mk
+    $(LOCAL_DIR)/lineage_haydn.mk

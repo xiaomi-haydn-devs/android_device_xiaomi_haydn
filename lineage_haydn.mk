@@ -8,13 +8,13 @@
 $(call inherit-product, device/xiaomi/haydn/device.mk)
 
 # Inherit some common Horizon stuff.
-$(call inherit-product, vendor/horizon/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := haydn
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2012K11G
-PRODUCT_NAME := horizon_haydn
+PRODUCT_NAME := lineage_haydn
 
 PRODUCT_SYSTEM_NAME := haydn_global
 PRODUCT_SYSTEM_DEVICE := haydn
@@ -32,6 +32,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Horizon
 HORIZON_MAINTAINER := Akshay
 TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GMS := true
+WITH_GMS_VARIANT := core
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
