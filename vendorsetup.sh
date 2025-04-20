@@ -11,7 +11,7 @@ git clone --depth=1 https://github.com/xiaomi-haydn-devs/proprietary_vendor_xiao
 
 # Kernel
 echo 'Cloning kernel tree'
-git clone --depth=1  https://github.com/xiaomi-haydn-devs/android_kernel_xiaomi_sm8350 --recursive -b lineage-21 kernel/xiaomi/sm8350
+git clone --depth=1  https://github.com/xiaomi-haydn-devs/android_kernel_xiaomi_sm8350 --recursive -b xiaomi_sm8350 kernel/xiaomi/sm8350
 
 # Firmware
 echo 'Cloning firmware'
