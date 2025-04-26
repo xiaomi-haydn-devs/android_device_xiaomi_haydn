@@ -26,6 +26,10 @@ rm -rf hardware/xiaomi/megvii
 echo 'Cloning Signing keys'
 git clone --depth=1 https://github.com/xiaomi-haydn-devs/priv_keys.git vendor/xiaomi/priv-keys
 
+# Xiaomi
+echo 'Cloning hardware xiaomi'
+rm -rf hardware/xiaomi && git clone --depth=1 https://github.com/LineageOS/android_hardware_xiaomi -b lineage-22.2 hardware/xiaomi
+
 # Leica Patch
 cd frameworks/base
 wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/14/Leicamera/0001-Add-backwards-compatible-CaptureResultExtras-constructor.patch
