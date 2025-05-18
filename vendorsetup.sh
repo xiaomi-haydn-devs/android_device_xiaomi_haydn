@@ -33,4 +33,6 @@ rm -rf hardware/xiaomi && git clone --depth=1 https://github.com/LineageOS/andro
 # nuke fsgen
 rm -rf build/soong/fsgen/
 
-echo 'delete vendorsetup.sh from device tree once this is done'
+echo 'deleting vendorsetup.sh from device tree'
+rm device/xiaomi/haydn/vendorsetup.sh
+
